@@ -5,40 +5,7 @@ import MatchDetails from "../components/MatchDetails";
 import Navbar from "../components/NavBar";
 import "../styles/styles.css"; // Adjust the path if needed
 
-interface GoalScorer {
-  name: string;
-  team: "home" | "away"; // Union type for team
-  minute: number;
-}
-
-interface Match {
-  homeTeam: string;
-  awayTeam: string;
-  score: string;
-  goalScorers: GoalScorer[];
-}
-
 const Results: React.FC = () => {
-  // Annotate the type of matches
-  const matches: Match[] = [
-    {
-      homeTeam: "Renmore",
-      awayTeam: "Salthill Devon",
-      score: "2 - 3",
-      goalScorers: [
-        { name: "Kian O'Connell", team: "away", minute: 15 },
-        { name: "Matthew Hosty", team: "away", minute: 45 },
-        { name: "George Gallagher", team: "away", minute: 78 },
-      ],
-    },
-    {
-      homeTeam: "Salthill Devon",
-      awayTeam: "East Galway",
-      score: "1 - 6",
-      goalScorers: [{ name: "Luke Mangan", team: "away", minute: 30 }],
-    },
-  ];
-
   return (
     <>
       <Navbar />

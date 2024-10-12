@@ -1,13 +1,6 @@
 import React from "react";
 import results from "../data/results.json"; // Assuming this path is correct
 
-interface GoalScorer {
-  name: string;
-  assist?: string; // Optional assist name
-  team: "home" | "away";
-  minute: number;
-}
-
 interface MatchDetailsProps {
   homeTeam: string;
   awayTeam: string;
