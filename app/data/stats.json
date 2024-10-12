@@ -1,0 +1,112 @@
+{
+  "players": [
+    {
+      "name": "Conor Comer",
+      "goals": 0,
+      "assists": 0,
+      "appearances": 2
+    },
+    {
+      "name": "Conor Fogarty",
+      "goals": 0,
+      "assists": 0,
+      "appearances": 2
+    },
+    {
+      "name": "Daniel Gilmore",
+      "goals": 0,
+      "assists": 0,
+      "appearances": 2
+    },
+    {
+      "name": "Daniel Mitchell",
+      "goals": 0,
+      "assists": 0,
+      "appearances": 2
+    },
+    {
+      "name": "Darragh Moran",
+      "goals": 0,
+      "assists": 0,
+      "appearances": 1
+    },
+    {
+      "name": "George Gallagher",
+      "goals": 1,
+      "assists": 1,
+      "appearances": 2
+    },
+    {
+      "name": "Greg Maher",
+      "goals": 0,
+      "assists": 0,
+      "appearances": 2
+    },
+    {
+      "name": "Jack Browne",
+      "goals": 0,
+      "assists": 0,
+      "appearances": 0
+    },
+    {
+      "name": "Kian O'Connell",
+      "goals": 1,
+      "assists": 1,
+      "appearances": 2
+    },
+    {
+      "name": "Kyle Cosgrove",
+      "goals": 0,
+      "assists": 0,
+      "appearances": 1
+    },
+    {
+      "name": "Luke Mangan",
+      "goals": 1,
+      "assists": 0,
+      "appearances": 2
+    },
+    {
+      "name": "Matthew Hosty",
+      "goals": 1,
+      "assists": 2,
+      "appearances": 2
+    },
+    {
+      "name": "Michael Monaghan",
+      "goals": 0,
+      "assists": 0,
+      "appearances": 2
+    },
+    {
+      "name": "Oisin Kelly",
+      "goals": 0,
+      "assists": 0,
+      "appearances": 2
+    },
+    {
+      "name": "Oisin McMahon",
+      "goals": 0,
+      "assists": 0,
+      "appearances": 1
+    },
+    {
+      "name": "Paddy Smyth",
+      "goals": 0,
+      "assists": 0,
+      "appearances": 1
+    },
+    {
+      "name": "Raph Hoy",
+      "goals": 0,
+      "assists": 0,
+      "appearances": 1
+    },
+    {
+      "name": "Oisin Taylor",
+      "goals": 0,
+      "assists": 0,
+      "appearances": 0
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+.match-details {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.match {
+  margin-bottom: 15px;
+  border-bottom: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.match-header {
+  font-size: 1.5em; /* Increase the size of the score */
+  font-weight: normal;
+}
+
+.team-name {
+  font-weight: bold;
+}
+
+.score {
+  font-weight: bold;
+  font-size: 1.5em; /* Size larger than team names */
+}
+
+.goal-scorer {
+  margin: 5px 0; /* Add vertical space between goal scorers */
+}
+
+.scorer-name {
+  font-weight: normal;
+  margin-right: 10px; /* Add space to the right of the scorer name */
+}
+
+.assist-name {
+  font-style: italic;
+}
+.body {
+  background: "#50c6dd";
+}
