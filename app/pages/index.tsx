@@ -8,9 +8,7 @@ const Home = () => {
       <Typography variant="h2" gutterBottom>
         Welcome to Salthill Devon U18B
       </Typography>
-      <Typography variant="h5" gutterBottom>
-        Monitor the team's progress throughout the season.
-      </Typography>
+
       <Button variant="contained" color="primary" sx={{ marginRight: 2 }}>
         <Link href="/stats" style={{ textDecoration: "none", color: "white" }}>
           View Season Stats
