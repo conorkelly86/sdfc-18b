@@ -14,14 +14,78 @@
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
+body,
+p {
+  background: #50c6dd; /* Light blue background */
+  color: #213466; /* Dark blue text color for better contrast */
   font-family: Arial, Helvetica, sans-serif;
 }
-
+a,
+button {
+  color: #fff; /* Dark blue/navy for links */
+  text-decoration: none; /* Remove underline from links */
+}
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+/* Match details container */
+.match-details {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+/* Individual match styles */
+.match {
+  margin-bottom: 15px;
+  border-bottom: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* Match header styles */
+.match-header {
+  font-size: 1.5em; /* Increase the size of the score */
+  font-weight: normal;
+}
+
+/* Team name styles */
+.team-name {
+  font-weight: bold;
+}
+
+/* Score styles */
+.score {
+  font-weight: bold;
+  font-size: 1.5em; /* Size larger than team names */
+}
+
+/* Goal scorer styles */
+.goal-scorer {
+  margin: 5px 0; /* Add vertical space between goal scorers */
+}
+
+/* Scorer name styles */
+.scorer-name {
+  font-weight: normal;
+  margin-right: 10px; /* Add space to the right of the scorer name */
+}
+
+/* Assist name styles */
+.assist-name {
+  font-style: italic;
+}
+
+/* Link styles */
+a {
+  color: #213466; /* Dark blue/navy for links */
+  text-decoration: none; /* Remove underline from links */
+}
+
+a:hover {
+  text-decoration: underline; /* Underline on hover for better visibility */
 }

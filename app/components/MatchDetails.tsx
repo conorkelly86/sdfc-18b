@@ -15,12 +15,7 @@ interface MatchDetailsProps {
   gameWeek: number; // Add gameWeek as a prop
 }
 
-const MatchDetails: React.FC<MatchDetailsProps> = ({
-  homeTeam,
-  awayTeam,
-  score,
-  gameWeek,
-}) => {
+const MatchDetails: React.FC<MatchDetailsProps> = ({ gameWeek }) => {
   // Filter results based on the provided gameWeek
   const filteredMatches = results.filter(
     (match) => match.gameWeek === gameWeek

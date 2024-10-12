@@ -2,8 +2,8 @@
 
 import React from "react";
 import MatchDetails from "../components/MatchDetails";
-import "../styles/styles.css"; // Adjust the path if needed
 import Navbar from "../components/NavBar";
+import "../styles/styles.css"; // Adjust the path if needed
 
 interface GoalScorer {
   name: string;

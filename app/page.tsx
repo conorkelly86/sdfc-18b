@@ -1,7 +1,7 @@
 "use client";
 
-import { useState, useEffect } from "react";
 import {
+  CircularProgress,
   Container,
   Table,
   TableBody,
@@ -9,12 +9,10 @@ import {
   TableHead,
   TableRow,
   Typography,
-  CircularProgress,
 } from "@mui/material";
-import stats from "./data/stats.json"; // Adjust the path if needed
-import { Score } from "@mui/icons-material";
-import MatchDetails from "./components/MatchDetails";
+import { useEffect, useState } from "react";
 import Navbar from "./components/NavBar";
+import stats from "./data/stats.json"; // Adjust the path if needed
 
 interface Player {
   name: string;

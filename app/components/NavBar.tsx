@@ -1,4 +1,4 @@
-import { AppBar, Toolbar, Typography, Button } from "@mui/material";
+import { AppBar, Button, Toolbar, Typography } from "@mui/material";
 import Link from "next/link";
 
 export default function Navbar() {
@@ -8,11 +8,15 @@ export default function Navbar() {
         <Typography variant="h6" sx={{ flexGrow: 1 }}>
           Salthill Devon U18B
         </Typography>
-        <Button color="inherit">
-          <Link href="/">Season Stats</Link>
+        <Button>
+          <Link href="/" style={{ color: "#fff" }}>
+            Season Stats
+          </Link>
         </Button>
-        <Button color="inherit">
-          <Link href="/results">Results</Link>
+        <Button>
+          <Link href="/results" style={{ color: "#fff" }}>
+            Results
+          </Link>
         </Button>
       </Toolbar>
     </AppBar>
