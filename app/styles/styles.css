@@ -8,8 +8,6 @@
 .match-details {
   font-family: Arial, sans-serif;
   margin: 20px;
-  display: flex;
-  justify-content: center;
 }
 
 /* Individual match styles */
@@ -25,6 +23,7 @@
 .match-header {
   font-size: 1.5em; /* Increase the size of the score */
   font-weight: normal;
+  text-align: center;
 }
 
 /* Team name styles */
@@ -41,6 +40,7 @@
 /* Goal scorer styles */
 .goal-scorer {
   margin: 5px 0; /* Add vertical space between goal scorers */
+  text-align: center;
 }
 
 /* Scorer name styles */

@@ -3,7 +3,6 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
   --foreground: #171717;
 }
 
@@ -35,8 +34,6 @@ button {
 .match-details {
   font-family: Arial, sans-serif;
   margin: 20px;
-  display: flex;
-  justify-content: center;
 }
 
 /* Individual match styles */
@@ -45,6 +42,7 @@ button {
   border-bottom: 1px solid #ccc;
   padding: 10px;
   border-radius: 5px;
+  align-content: center;
 }
 
 /* Match header styles */
