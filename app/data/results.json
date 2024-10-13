@@ -18,5 +18,17 @@
     "goalScorers": [
       { "name": "Luke Mangan", "team": "away", "assist": "Kian O'Connell" }
     ]
+  },
+  {
+    "gameWeek": 3,
+    "homeTeam": "Salthill Devon",
+    "awayTeam": "Gort",
+    "score": "4 - 2",
+    "goalScorers": [
+      { "name": "Luke Mangan", "team": "home", "assist": "none" },
+      { "name": "Oisin Taylor", "team": "home", "assist": "none" },
+      { "name": "Daniel Mitchell", "team": "home", "assist": "Conor Comer" },
+      { "name": "Matthew Hosty", "team": "home", "assist": "Kian O'Connell" }
+    ]
   }
 ]

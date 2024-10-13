@@ -3,26 +3,26 @@
     {
       "name": "Conor Comer",
       "goals": 0,
-      "assists": 0,
-      "appearances": 2
+      "assists": 1,
+      "appearances": 3
     },
     {
       "name": "Conor Fogarty",
       "goals": 0,
       "assists": 0,
-      "appearances": 2
+      "appearances": 3
     },
     {
       "name": "Daniel Gilmore",
       "goals": 0,
       "assists": 0,
-      "appearances": 2
+      "appearances": 3
     },
     {
       "name": "Daniel Mitchell",
-      "goals": 0,
+      "goals": 1,
       "assists": 0,
-      "appearances": 2
+      "appearances": 3
     },
     {
       "name": "Darragh Moran",
@@ -34,7 +34,7 @@
       "name": "George Gallagher",
       "goals": 1,
       "assists": 1,
-      "appearances": 2
+      "appearances": 3
     },
     {
       "name": "Greg Maher",
@@ -46,13 +46,13 @@
       "name": "Jack Browne",
       "goals": 0,
       "assists": 0,
-      "appearances": 0
+      "appearances": 1
     },
     {
       "name": "Kian O'Connell",
       "goals": 1,
-      "assists": 1,
-      "appearances": 2
+      "assists": 2,
+      "appearances": 3
     },
     {
       "name": "Kyle Cosgrove",
@@ -62,33 +62,33 @@
     },
     {
       "name": "Luke Mangan",
-      "goals": 1,
+      "goals": 2,
       "assists": 0,
-      "appearances": 2
+      "appearances": 3
     },
     {
       "name": "Matthew Hosty",
-      "goals": 1,
+      "goals": 2,
       "assists": 2,
-      "appearances": 2
+      "appearances": 3
     },
     {
       "name": "Michael Monaghan",
       "goals": 0,
       "assists": 0,
-      "appearances": 2
+      "appearances": 3
     },
     {
       "name": "Oisin Kelly",
       "goals": 0,
       "assists": 0,
-      "appearances": 2
+      "appearances": 3
     },
     {
       "name": "Oisin McMahon",
       "goals": 0,
       "assists": 0,
-      "appearances": 1
+      "appearances": 2
     },
     {
       "name": "Paddy Smyth",
@@ -100,13 +100,13 @@
       "name": "Raph Hoy",
       "goals": 0,
       "assists": 0,
-      "appearances": 1
+      "appearances": 2
     },
     {
       "name": "Oisin Taylor",
-      "goals": 0,
+      "goals": 1,
       "assists": 0,
-      "appearances": 0
+      "appearances": 1
     }
   ]
 }

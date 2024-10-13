@@ -30,7 +30,7 @@ const MatchDetails: React.FC<MatchDetailsProps> = ({ gameWeek }) => {
                   {match.goalScorers.map((scorer, scorerIndex) => (
                     <li key={scorerIndex} className="goal-scorer">
                       <span className="scorer-name">⚽ {scorer.name}</span>
-                      {scorer.assist && (
+                      {scorer.assist && scorer.assist !== "none" && (
                         <span className="assist-name">
                           {" "}
                           🅰️ <em>{scorer.assist}</em>
