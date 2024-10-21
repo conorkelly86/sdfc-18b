@@ -33,5 +33,15 @@
       { "name": "Matthew Hosty", "team": "home", "assist": "Kian O'Connell" }
     ],
     "motm": "Kian O'Connell"
+  },
+  {
+    "gameWeek": 4,
+    "homeTeam": "Ballinasloe",
+    "awayTeam": "Salthill Devon",
+    "score": "6 - 1",
+    "goalScorers": [
+      { "name": "Luke Mangan", "team": "away", "assist": "Michael Monaghan" }
+    ],
+    "motm": "Daniel Mitchell & Kyle Cosgrove"
   }
 ]
