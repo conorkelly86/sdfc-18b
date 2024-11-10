@@ -11,6 +11,12 @@ const Results: React.FC = () => {
       <Navbar />
       <div className="results-page">
         <MatchDetails
+          homeTeam="Oranmore/Maree"
+          awayTeam="Salthill Devon"
+          score="1 - 2"
+          gameWeek={5}
+        />
+        <MatchDetails
           homeTeam="Ballinasloe"
           awayTeam="Salthill Devon"
           score="6 - 1"
