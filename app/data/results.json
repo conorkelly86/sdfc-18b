@@ -54,5 +54,15 @@
       { "name": "Luke Mangan", "team": "away", "assist": "George Gallagher" }
     ],
     "motm": "Kian O'Connell"
+  },
+  {
+    "gameWeek": 6,
+    "homeTeam": "Salthill Devon",
+    "awayTeam": "Bearna Na Forbacha",
+    "score": "1 - 0",
+    "goalScorers": [
+      { "name": "Own Goal", "team": "home", "assist": "Raph Hoy" }
+    ],
+    "motm": "Daniel Gilmore"
   }
 ]
