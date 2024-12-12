@@ -64,5 +64,20 @@
       { "name": "Own Goal", "team": "home", "assist": "Raph Hoy" }
     ],
     "motm": "Daniel Gilmore"
+  },
+  {
+    "gameWeek": 7,
+    "homeTeam": "Salthill Devon",
+    "awayTeam": "East Galway",
+    "score": "6 - 3",
+    "goalScorers": [
+      { "name": "Matthew Hosty", "team": "home", "assist": "Kyle Cosgrove" },
+      { "name": "Luke Mangan", "team": "home", "assist": "Matthew Hosty" },
+      { "name": "Own Goal", "team": "home", "assist": "Kyle Cosgrove" },
+      { "name": "Matthew Hosty", "team": "home", "assist": "Kyle Cosgrove" },
+      { "name": "Raph Hoy", "team": "home", "assist": "" },
+      { "name": "Oisin McMahon", "team": "home", "assist": "Michael Monaghan" }
+    ],
+    "motm": "Matthew Hosty"
   }
 ]
