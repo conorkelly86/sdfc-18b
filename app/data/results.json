@@ -79,5 +79,21 @@
       { "name": "Oisin McMahon", "team": "home", "assist": "Michael Monaghan" }
     ],
     "motm": "Matthew Hosty"
+  },
+  {
+    "gameWeek": 8,
+    "homeTeam": "Gort",
+    "awayTeam": "Salthill Devon",
+    "score": "2 - 3",
+    "goalScorers": [
+      { "name": "Luke Mangan", "team": "away", "assist": "Matthew Hosty" },
+      {
+        "name": "Michael Monaghan",
+        "team": "away",
+        "assist": "Kian O'Connell"
+      },
+      { "name": "Matthew Hosty", "team": "home", "assist": "Paddy Smyth" }
+    ],
+    "motm": "Luke Mangan"
   }
 ]
