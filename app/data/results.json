@@ -95,5 +95,20 @@
       { "name": "Matthew Hosty", "team": "home", "assist": "Paddy Smyth" }
     ],
     "motm": "Luke Mangan"
+  },
+  {
+    "gameWeek": 9,
+    "homeTeam": "Athenry",
+    "awayTeam": "Salthill Devon",
+    "score": "3 - 6",
+    "goalScorers": [
+      { "name": "Matthew Hosty", "team": "away", "assist": "George Gallagher" },
+      { "name": "Matthew Hosty", "team": "away", "assist": "George Gallagher" },
+      { "name": "Conor Comer", "team": "away", "assist": "Kian O'Connell" },
+      { "name": "George Gallagher", "team": "away", "assist": "Matthew Hosty" },
+      { "name": "George Gallagher", "team": "away", "assist": "Paddy Smyth" },
+      { "name": "George Gallagher", "team": "away", "assist": "Conor Comer" }
+    ],
+    "motm": "George Gallagher & Michael Monaghan"
   }
 ]
