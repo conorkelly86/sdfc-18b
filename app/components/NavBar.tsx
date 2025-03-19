@@ -18,6 +18,11 @@ export default function Navbar() {
             Results
           </Link>
         </Button>
+        <Button>
+          <Link href="/stats" style={{ color: "#fff" }}>
+            Top Players
+          </Link>
+        </Button>
       </Toolbar>
     </AppBar>
   );
