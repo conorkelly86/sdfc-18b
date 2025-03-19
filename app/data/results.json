@@ -110,5 +110,21 @@
       { "name": "George Gallagher", "team": "away", "assist": "Conor Comer" }
     ],
     "motm": "George Gallagher & Michael Monaghan"
+  },
+  {
+    "gameWeek": 10,
+    "homeTeam": "East Galway",
+    "awayTeam": "Salthill Devon",
+    "score": "4 - 3",
+    "goalScorers": [
+      { "name": "Luke Mangan", "team": "away", "assist": "Kian O'Connell" },
+      {
+        "name": "Daniel Mitchell",
+        "team": "away",
+        "assist": "George Gallagher"
+      },
+      { "name": "Luke Mangan", "team": "away", "assist": "Daniel Mitchell" }
+    ],
+    "motm": "Luke Mangan"
   }
 ]
