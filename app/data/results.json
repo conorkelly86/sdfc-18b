@@ -126,5 +126,24 @@
       { "name": "Luke Mangan", "team": "away", "assist": "Daniel Mitchell" }
     ],
     "motm": "Luke Mangan"
+  },
+  {
+    "gameWeek": 11,
+    "homeTeam": "Salthill Devon",
+    "awayTeam": "Ballinasloe",
+    "score": "2 - 2",
+    "goalScorers": [
+      {
+        "name": "George Gallagher",
+        "team": "home",
+        "assist": "Kian O'Connell"
+      },
+      {
+        "name": "George Gallagher",
+        "team": "home",
+        "assist": "Daniel Mitchell"
+      }
+    ],
+    "motm": "Luke Mangan"
   }
 ]
