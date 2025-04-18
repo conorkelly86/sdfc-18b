@@ -145,5 +145,24 @@
       }
     ],
     "motm": "George Gallager & Daniel Mitchell"
+  },
+  {
+    "gameWeek": 12,
+    "homeTeam": "Oranmore/Maree",
+    "awayTeam": "Salthill Devon",
+    "score": "1 - 2",
+    "goalScorers": [
+      {
+        "name": "Kyle Cosgrove",
+        "team": "home",
+        "assist": ""
+      },
+      {
+        "name": "Paddy Smyth",
+        "team": "home",
+        "assist": ""
+      }
+    ],
+    "motm": "Paddy Smyth"
   }
 ]
