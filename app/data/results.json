@@ -165,4 +165,49 @@
     ],
     "motm": "Paddy Smyth"
   }
+{
+    "gameWeek": 13,
+    "homeTeam": "Salthill Devon ",
+    "awayTeam": "Renmore ",
+    "score": "0 - 2",
+    "goalScorers": [
+      
+    ],
+    "motm": "Daniel Mitchell "
+  }, 
+{
+    "gameWeek": 14,
+    "homeTeam": "Bearna ",
+    "awayTeam": "Salthill Devon",
+    "score": "2 -5",
+    "goalScorers": [
+      {
+        "name": "George Gallagher ",
+        "team": "away",
+        "assist": "Oisin McMahon "
+      },
+      {
+        "name": "Oisin Mc",
+        "team": "away",
+        "assist": "George Gallagher"
+      }, 
+  {
+        "name": "George Gallagher ",
+        "team": "away",
+        "assist": "Daniel Mitchell "
+      },
+  {
+        "name": "Daniel Mitchell ",
+        "team": "away",
+        "assist": "Matthew Hosty"
+      },
+  {
+        "name": "Daniel Mitchell ",
+        "team": "away",
+        "assist": ""
+      },
+    ],
+    "motm": "Oisin McMahon "
+  }
+
 ]
