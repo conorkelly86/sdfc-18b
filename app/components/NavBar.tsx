@@ -1,3 +1,5 @@
+"use client";
+
 import {
   AppBar,
   Button,
@@ -5,11 +7,28 @@ import {
   Typography,
   Box,
   Container,
+  IconButton,
+  Drawer,
+  List,
+  ListItem,
+  ListItemButton,
+  ListItemText,
 } from "@mui/material";
+import MenuIcon from "@mui/icons-material/Menu";
 import Link from "next/link";
 import Image from "next/image";
+import React from "react";
+
+const navLinks = [
+  { label: "Season Stats", href: "/" },
+  { label: "Results", href: "/results" },
+  { label: "Top Players", href: "/stats" },
+  { label: "Media", href: "/media" },
+];
 
 export default function Navbar() {
+  const [drawerOpen, setDrawerOpen] = React.useState(false);
+
   return (
     <AppBar
       position="static"
@@ -65,77 +84,67 @@ export default function Navbar() {
             </Typography>
           </Box>
 
+          {/* Desktop Nav */}
           <Box
             sx={{
-              display: "flex",
+              display: { xs: "none", md: "flex" },
               gap: 1,
               alignItems: "center",
             }}
           >
-            <Button
-              component={Link}
-              href="/"
-              sx={{
-                color: "white",
-                fontWeight: 500,
-                fontSize: "0.9rem",
-                padding: "6px 16px",
-                borderRadius: "8px",
-                "&:hover": {
-                  background: "rgba(255, 255, 255, 0.1)",
-                },
-              }}
+            {navLinks.map((link) => (
+              <Button
+                key={link.href}
+                component={Link}
+                href={link.href}
+                sx={{
+                  color: "white",
+                  fontWeight: 500,
+                  fontSize: "0.9rem",
+                  padding: "6px 16px",
+                  borderRadius: "8px",
+                  "&:hover": {
+                    background: "rgba(255, 255, 255, 0.1)",
+                  },
+                }}
+              >
+                {link.label}
+              </Button>
+            ))}
+          </Box>
+
+          {/* Mobile Nav */}
+          <Box sx={{ display: { xs: "flex", md: "none" } }}>
+            <IconButton
+              color="inherit"
+              edge="end"
+              onClick={() => setDrawerOpen(true)}
+              aria-label="menu"
             >
-              Season Stats
-            </Button>
-            <Button
-              component={Link}
-              href="/results"
-              sx={{
-                color: "white",
-                fontWeight: 500,
-                fontSize: "0.9rem",
-                padding: "6px 16px",
-                borderRadius: "8px",
-                "&:hover": {
-                  background: "rgba(255, 255, 255, 0.1)",
-                },
-              }}
+              <MenuIcon />
+            </IconButton>
+            <Drawer
+              anchor="top"
+              open={drawerOpen}
+              onClose={() => setDrawerOpen(false)}
             >
-              Results
-            </Button>
-            <Button
-              component={Link}
-              href="/stats"
-              sx={{
-                color: "white",
-                fontWeight: 500,
-                fontSize: "0.9rem",
-                padding: "6px 16px",
-                borderRadius: "8px",
-                "&:hover": {
-                  background: "rgba(255, 255, 255, 0.1)",
-                },
-              }}
-            >
-              Top Players
-            </Button>
-            <Button
-              component={Link}
-              href="/media"
-              sx={{
-                color: "white",
-                fontWeight: 500,
-                fontSize: "0.9rem",
-                padding: "6px 16px",
-                borderRadius: "8px",
-                "&:hover": {
-                  background: "rgba(255, 255, 255, 0.1)",
-                },
-              }}
-            >
-              Media
-            </Button>
+              <Box
+                sx={{ width: 220 }}
+                role="presentation"
+                onClick={() => setDrawerOpen(false)}
+                onKeyDown={() => setDrawerOpen(false)}
+              >
+                <List>
+                  {navLinks.map((link) => (
+                    <ListItem key={link.href} disablePadding>
+                      <ListItemButton component={Link} href={link.href}>
+                        <ListItemText primary={link.label} />
+                      </ListItemButton>
+                    </ListItem>
+                  ))}
+                </List>
+              </Box>
+            </Drawer>
           </Box>
         </Toolbar>
       </Container>

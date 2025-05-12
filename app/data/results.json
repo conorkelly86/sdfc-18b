@@ -58,7 +58,7 @@
   {
     "gameWeek": 6,
     "homeTeam": "Salthill Devon",
-    "awayTeam": "Bearna Na Forbacha",
+    "awayTeam": "Bearna",
     "score": "1 - 0",
     "goalScorers": [
       { "name": "Own Goal", "team": "home", "assist": "Raph Hoy" }
@@ -194,7 +194,7 @@
   },
   {
     "gameWeek": 15,
-    "homeTeam": "Bearna Na Forbacha",
+    "homeTeam": "Bearna",
     "awayTeam": "Salthill Devon",
     "score": "2 - 5",
     "goalScorers": [

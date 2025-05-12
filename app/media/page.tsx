@@ -72,18 +72,7 @@ const MediaPage = () => {
         >
           Images
         </Typography>
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(5, 1fr)",
-            gap: 20,
-            marginBottom: 40,
-            justifyContent: "center",
-            maxWidth: 1200,
-            marginLeft: "auto",
-            marginRight: "auto",
-          }}
-        >
+        <div className="media-gallery-grid">
           {[...images].reverse().map((img) => (
             <a
               key={img}
@@ -128,17 +117,7 @@ const MediaPage = () => {
         >
           Videos
         </Typography>
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(2, 1fr)",
-            gap: 32,
-            justifyContent: "center",
-            maxWidth: 1100,
-            marginLeft: "auto",
-            marginRight: "auto",
-          }}
-        >
+        <div className="media-video-grid">
           {[...videos].reverse().map((vid) => (
             <div
               key={vid}
