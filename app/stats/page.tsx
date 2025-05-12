@@ -27,8 +27,10 @@ const StatsPage: React.FC = () => {
     .sort((a, b) => b.assists - a.assists)
     .slice(0, 5);
   const topMOTM = [...players]
-    .filter((p) => p.motm !== undefined)
-    .sort((a, b) => (b.motm || 0) - (a.motm || 0))
+    .filter((p) => p.motm !== undefined && p.motm > 0)
+    .sort((a, b) => (b.motm || 0) - (a.motm || 0));
+  const topGoalContributors = [...players]
+    .sort((a, b) => b.goals + b.assists - (a.goals + a.assists))
     .slice(0, 5);
 
   return (
@@ -62,19 +64,31 @@ const StatsPage: React.FC = () => {
             </ul>
           </div>
 
-          {/* Most MOTM Awards (if available) */}
-          {topMOTM.length > 0 && (
-            <div className="stats-box">
-              <h2>Most Man of the Match</h2>
-              <ul>
-                {topMOTM.map((player, index) => (
-                  <li key={index}>
-                    {player.name} - {player.motm} MOTM Awards
-                  </li>
-                ))}
-              </ul>
-            </div>
-          )}
+          {/* Top Goal Contributors */}
+          <div className="stats-box">
+            <h2>Top Goal Contributors</h2>
+            <ul>
+              {topGoalContributors.map((player, index) => (
+                <li key={index}>
+                  {player.name}: {player.goals + player.assists} ({player.goals}
+                  G {player.assists}A)
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Most MOTM Awards */}
+          <div className="stats-box">
+            <h2>Man of the Match Awards</h2>
+            <ul>
+              {topMOTM.map((player, index) => (
+                <li key={index}>
+                  {player.name} - {player.motm}{" "}
+                  {player.motm === 1 ? "Award" : "Awards"}
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </div>
     </>

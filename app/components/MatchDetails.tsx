@@ -32,12 +32,14 @@ const MatchDetails: React.FC<MatchDetailsProps> = ({ gameWeek }) => {
                       {" "}
                       <li key={scorerIndex} className="goal-scorer">
                         <span className="scorer-name">⚽ {scorer.name}</span>
-                        {scorer.assist && scorer.assist !== "none" && (
-                          <span className="assist-name">
-                            {" "}
-                            🅰️ <em>{scorer.assist}</em>
-                          </span>
-                        )}
+                        <span className="assist-name">
+                          <span className="assist-separator">|</span>
+                          {scorer.assist && scorer.assist !== "none" ? (
+                            <>🅰️ {scorer.assist}</>
+                          ) : (
+                            <span className="no-assist">No Assist</span>
+                          )}
+                        </span>
                       </li>
                     </>
                   ))}

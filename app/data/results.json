@@ -144,7 +144,7 @@
         "assist": "Daniel Mitchell"
       }
     ],
-    "motm": "George Gallager & Daniel Mitchell"
+    "motm": "George Gallagher & Daniel Mitchell"
   },
   {
     "gameWeek": 12,
@@ -164,6 +164,67 @@
       }
     ],
     "motm": "Paddy Smyth"
+  },
+  {
+    "gameWeek": 13,
+    "homeTeam": "Salthill Devon",
+    "awayTeam": "Oranmore/Maree",
+    "score": "2 - 5",
+    "goalScorers": [
+      {
+        "name": "George Gallagher",
+        "team": "home",
+        "assist": "Conor Comer"
+      },
+      {
+        "name": "Matthew Hosty",
+        "team": "home",
+        "assist": "Conor Comer"
+      }
+    ],
+    "motm": "Conor Comer"
+  },
+  {
+    "gameWeek": 14,
+    "homeTeam": "Salthill Devon",
+    "awayTeam": "Renmore",
+    "score": "0 - 2",
+    "goalScorers": [],
+    "motm": "Daniel Mitchell"
+  },
+  {
+    "gameWeek": 15,
+    "homeTeam": "Bearna Na Forbacha",
+    "awayTeam": "Salthill Devon",
+    "score": "2 - 5",
+    "goalScorers": [
+      {
+        "name": "Oisin McMahon",
+        "team": "home",
+        "assist": "George Gallagher"
+      },
+      {
+        "name": "George Gallagher",
+        "team": "home",
+        "assist": "Oisin McMahon"
+      },
+      {
+        "name": "Matthew Hosty",
+        "team": "home",
+        "assist": "Daniel Mitchell"
+      },
+      {
+        "name": "Daniel Mitchell",
+        "team": "home",
+        "assist": "Matthew Hosty"
+      },
+      {
+        "name": "Daniel Mitchell",
+        "team": "home",
+        "assist": ""
+      }
+    ],
+    "motm": "Daniel Mitchell"
   }
 {
     "gameWeek": 13,

@@ -7,23 +7,38 @@
 /* Match details container */
 .match-details {
   font-family: Arial, sans-serif;
-  margin: 20px;
+  margin: 20px auto;
+  max-width: 600px;
+  width: 100%;
 }
 
 /* Individual match styles */
 .match {
   margin-bottom: 15px;
   border-bottom: 1px solid #ccc;
-  padding: 10px;
-  border-radius: 5px;
-  background: rgba(255, 255, 255, 0.8); /* Light background for matches */
+  padding: 15px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Results page container */
+.results-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 /* Match header styles */
 .match-header {
-  font-size: 1.5em; /* Increase the size of the score */
+  font-size: 1.5em;
   font-weight: normal;
   text-align: center;
+  margin-bottom: 10px;
+  color: #213466;
 }
 
 /* Team name styles */
@@ -37,21 +52,55 @@
   font-size: 1.5em; /* Size larger than team names */
 }
 
+/* Goal scorers container */
+.goal-scorers ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
 /* Goal scorer styles */
 .goal-scorer {
-  margin: 5px 0; /* Add vertical space between goal scorers */
+  margin: 8px 0;
   text-align: center;
+  padding: 8px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
 }
 
 /* Scorer name styles */
 .scorer-name {
-  font-weight: normal;
-  margin-right: 10px; /* Add space to the right of the scorer name */
+  font-weight: 500;
+  min-width: 150px;
+  text-align: right;
 }
 
 /* Assist name styles */
 .assist-name {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  min-width: 150px;
+  text-align: left;
+}
+
+.no-assist {
+  color: #999;
   font-style: italic;
+}
+
+.assist-separator {
+  color: #ccc;
+  margin: 0 5px;
+}
+
+/* Remove italic from assist name */
+.assist-name em {
+  font-style: normal;
 }
 
 /* Link styles */
@@ -66,36 +115,159 @@ a:hover {
 
 .stats-page {
   text-align: center;
-  padding: 20px;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(to bottom, #50c6dd, #38c4e9);
+  min-height: 100vh;
+}
+
+.stats-page h1 {
+  color: #213466;
+  font-size: 2.5em;
+  margin-bottom: 30px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  font-weight: 600;
 }
 
 .stats-container {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 320px);
+  gap: 25px;
   margin-top: 20px;
+  justify-content: center;
+  max-width: 680px;
+  padding: 0 20px;
 }
 
 .stats-box {
-  background: #38c4e9;
-  color: white;
-  padding: 15px;
-  border-radius: 8px;
-  width: 300px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.95);
+  color: #213466;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.stats-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
 }
 
 .stats-box h2 {
-  margin-bottom: 10px;
+  margin-bottom: 15px;
+  font-size: 1.4em;
+  color: #213466;
+  font-weight: 600;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #38c4e9;
 }
 
 .stats-box ul {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
 .stats-box li {
-  font-size: 16px;
-  margin: 5px 0;
+  font-size: 15px;
+  margin: 12px 0;
+  padding: 8px 12px;
+  background: rgba(56, 196, 233, 0.1);
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.stats-box li:hover {
+  background: rgba(56, 196, 233, 0.15);
+}
+
+.stats-box li:first-child {
+  background: rgba(56, 196, 233, 0.2);
+  font-weight: 500;
+}
+
+/* Add a subtle animation for the stats boxes */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.stats-box {
+  animation: fadeInUp 0.5s ease-out forwards;
+}
+
+.stats-box:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.stats-box:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+.stats-box:nth-child(4) {
+  animation-delay: 0.3s;
+}
+
+/* Add a subtle gradient background to the page */
+body {
+  background: linear-gradient(135deg, #50c6dd 0%, #38c4e9 100%);
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+/* Make the navbar more prominent */
+.navbar {
+  background: #213466 !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Add a subtle pattern to the background */
+.stats-page::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: radial-gradient(
+      circle at 25px 25px,
+      rgba(255, 255, 255, 0.1) 2%,
+      transparent 0%
+    ),
+    radial-gradient(
+      circle at 75px 75px,
+      rgba(255, 255, 255, 0.1) 2%,
+      transparent 0%
+    );
+  background-size: 100px 100px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.stats-container {
+  position: relative;
+  z-index: 1;
+}
+
+/* MOTM styles */
+h3[style*="text-align: center"] {
+  margin-top: 15px;
+  padding: 8px;
+  background: #38c4e9;
+  color: white;
+  border-radius: 4px;
+  font-size: 1.1em;
 }

@@ -23,6 +23,24 @@ const Results: React.FC = () => {
   gameWeek={13}
 />
         <MatchDetails
+          homeTeam="Bearna Na Forbacha"
+          awayTeam="Salthill Devon"
+          score="2 - 5"
+          gameWeek={15}
+        />
+        <MatchDetails
+          homeTeam="Salthill Devon"
+          awayTeam="Renmore"
+          score="0 - 2"
+          gameWeek={14}
+        />
+        <MatchDetails
+          homeTeam="Salthill Devon"
+          awayTeam="Oranmore/Maree"
+          score="2 - 5"
+          gameWeek={13}
+        />
+        <MatchDetails
           homeTeam="Oranmore/Maree"
           awayTeam="Salthill Devon"
           score="1 - 2"
