@@ -271,3 +271,156 @@ h3[style*="text-align: center"] {
   border-radius: 4px;
   font-size: 1.1em;
 }
+
+/* Stacked card style for goal/assist */
+.goal-card {
+  background: transparent;
+  border-radius: 10px;
+  margin: 16px 0;
+  padding: 16px 18px 14px 18px;
+  box-shadow: none;
+  border: 1.5px solid rgba(56, 196, 233, 0.18);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 0;
+  text-align: center;
+}
+.goal-card-scorer {
+  font-size: 1.18em;
+  font-weight: 700;
+  color: #1a2a52;
+  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: center;
+}
+.goal-card-assist {
+  font-size: 1em;
+  color: #246b8e;
+  font-weight: 500;
+  margin-top: 2px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  justify-content: center;
+}
+.goal-card .no-assist {
+  color: #b0b0b0;
+  font-style: italic;
+  font-size: 0.98em;
+  font-weight: 400;
+}
+
+/* Badge/Chip style for goal/assist */
+.goal-chip-row {
+  display: flex;
+  gap: 12px;
+  margin: 10px 0;
+  align-items: center;
+  justify-content: center;
+}
+.goal-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 1em;
+  font-weight: 500;
+  background: #eaf7fb;
+  color: #1a2a52;
+  box-shadow: 0 1px 4px rgba(56, 196, 233, 0.08);
+  border: 1.5px solid #b6e3f3;
+  min-width: 0;
+  white-space: nowrap;
+}
+.scorer-chip {
+  background: #38c4e9;
+  color: #fff;
+  border: 1.5px solid #38c4e9;
+}
+.assist-chip {
+  background: #fff;
+  color: #246b8e;
+  border: 1.5px solid #38c4e9;
+}
+.no-assist-chip {
+  background: #f2f2f2;
+  color: #b0b0b0;
+  border: 1.5px solid #e0e0e0;
+  font-style: italic;
+}
+
+/* Vertical Timeline style for goal/assist */
+.timeline-event {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  margin: 24px 0 24px 32px;
+  min-height: 48px;
+}
+.timeline-dot {
+  position: absolute;
+  left: -32px;
+  top: 8px;
+  width: 16px;
+  height: 16px;
+  background: #38c4e9;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  box-shadow: 0 0 0 2px #38c4e9;
+  z-index: 2;
+}
+.timeline-connector {
+  position: absolute;
+  left: -25px;
+  top: 28px;
+  width: 2px;
+  height: calc(100% - 28px);
+  background: linear-gradient(to bottom, #38c4e9 60%, #eaf7fb 100%);
+  z-index: 1;
+}
+.timeline-content {
+  margin-left: 8px;
+  min-width: 0;
+}
+.timeline-scorer {
+  font-size: 1.13em;
+  font-weight: 600;
+  color: #1a2a52;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.timeline-assist {
+  font-size: 0.98em;
+  color: #246b8e;
+  margin-left: 28px;
+  margin-top: 2px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.timeline-assist .no-assist {
+  color: #b0b0b0;
+  font-style: italic;
+  font-weight: 400;
+}
+
+.motm-highlight {
+  margin: 28px auto 10px auto;
+  padding: 12px 24px;
+  background: linear-gradient(90deg, #ffe066 0%, #fffbe6 100%);
+  color: #213466;
+  border-radius: 8px;
+  font-size: 1.13em;
+  font-weight: 600;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(255, 224, 102, 0.1);
+  border: 2px solid #ffe066;
+  display: block;
+  max-width: 400px;
+}

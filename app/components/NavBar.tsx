@@ -120,6 +120,22 @@ export default function Navbar() {
             >
               Top Players
             </Button>
+            <Button
+              component={Link}
+              href="/media"
+              sx={{
+                color: "white",
+                fontWeight: 500,
+                fontSize: "0.9rem",
+                padding: "6px 16px",
+                borderRadius: "8px",
+                "&:hover": {
+                  background: "rgba(255, 255, 255, 0.1)",
+                },
+              }}
+            >
+              Media
+            </Button>
           </Box>
         </Toolbar>
       </Container>

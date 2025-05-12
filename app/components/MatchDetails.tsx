@@ -28,23 +28,40 @@ const MatchDetails: React.FC<MatchDetailsProps> = ({ gameWeek }) => {
                 </h3>
                 <ul>
                   {match.goalScorers.map((scorer, scorerIndex) => (
-                    <>
-                      {" "}
-                      <li key={scorerIndex} className="goal-scorer">
-                        <span className="scorer-name">⚽ {scorer.name}</span>
-                        <span className="assist-name">
-                          <span className="assist-separator">|</span>
-                          {scorer.assist && scorer.assist !== "none" ? (
-                            <>🅰️ {scorer.assist}</>
+                    <li key={scorerIndex} className="timeline-event">
+                      <div className="timeline-dot" />
+                      <div className="timeline-content">
+                        <div className="timeline-scorer">
+                          <span role="img" aria-label="goal">
+                            ⚽
+                          </span>{" "}
+                          <strong>{scorer.name}</strong>
+                        </div>
+                        <div className="timeline-assist">
+                          {scorer.assist &&
+                          scorer.assist !== "none" &&
+                          scorer.assist !== "" ? (
+                            <>
+                              <span role="img" aria-label="assist">
+                                🅰️
+                              </span>{" "}
+                              <span>{scorer.assist}</span>
+                            </>
                           ) : (
                             <span className="no-assist">No Assist</span>
                           )}
-                        </span>
-                      </li>
-                    </>
+                        </div>
+                      </div>
+                      {scorerIndex !== match.goalScorers.length - 1 && (
+                        <div className="timeline-connector" />
+                      )}
+                    </li>
                   ))}
-                  <h3 style={{ textAlign: "center" }}>
-                    ⭐ Man Of The Match: {match.motm}
+                  <h3 className="motm-highlight">
+                    <span role="img" aria-label="star">
+                      ⭐
+                    </span>{" "}
+                    <strong>Man Of The Match:</strong> {match.motm}
                   </h3>
                 </ul>
               </div>
