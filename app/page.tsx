@@ -236,7 +236,7 @@ const Page = () => {
                     paddingRight: "32px", // Space for the sort icon
                   }}
                 >
-                  Appearances
+                  Apps
                   <Box
                     component="span"
                     sx={{
