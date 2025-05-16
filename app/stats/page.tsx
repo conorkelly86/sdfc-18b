@@ -1,35 +1,33 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import "../styles/styles.css"; // Adjust the path if needed
+import "../styles/styles.css";
 import Navbar from "../components/NavBar";
-import stats from "../data/stats.json"; // Ensure this path is correct
+import stats from "../data/stats.json";
 
 interface Player {
   name: string;
   goals: number;
   assists: number;
   appearances: number;
-  motm?: number; // Optional if you have MOTM stats
+  motm?: number;
 }
 
 const StatsPage: React.FC = () => {
   const [players, setPlayers] = useState<Player[]>([]);
 
   useEffect(() => {
-    // ✅ Set the imported data directly instead of using fetch
     setPlayers(stats.players);
   }, []);
 
-  // Sort players by goals, assists, and MOTM (if available)
-  const topScorers = [...players].sort((a, b) => b.goals - a.goals).slice(0, 5);
-  const topAssisters = [...players]
+  const topScorers = players.sort((a, b) => b.goals - a.goals).slice(0, 5);
+  const topAssisters = players
     .sort((a, b) => b.assists - a.assists)
     .slice(0, 5);
-  const topMOTM = [...players]
-    .filter((p) => p.motm !== undefined && p.motm > 0)
+  const topMOTM = players
+    .filter((p) => p.motm)
     .sort((a, b) => (b.motm || 0) - (a.motm || 0));
-  const topGoalContributors = [...players]
+  const topGoalContributors = players
     .sort((a, b) => b.goals + b.assists - (a.goals + a.assists))
     .slice(0, 5);
 
@@ -38,9 +36,7 @@ const StatsPage: React.FC = () => {
       <Navbar />
       <div className="stats-page">
         <h1>Team Stats</h1>
-
         <div className="stats-container">
-          {/* Top Goal Scorers */}
           <div className="stats-box">
             <h2>Top Goal Scorers</h2>
             <ul>
@@ -51,8 +47,6 @@ const StatsPage: React.FC = () => {
               ))}
             </ul>
           </div>
-
-          {/* Top Assisters */}
           <div className="stats-box">
             <h2>Top Assisters</h2>
             <ul>
@@ -63,8 +57,6 @@ const StatsPage: React.FC = () => {
               ))}
             </ul>
           </div>
-
-          {/* Top Goal Contributors */}
           <div className="stats-box">
             <h2>Top Goal Contributors</h2>
             <ul>
@@ -76,8 +68,6 @@ const StatsPage: React.FC = () => {
               ))}
             </ul>
           </div>
-
-          {/* Most MOTM Awards */}
           <div className="stats-box">
             <h2>Man of the Match Awards</h2>
             <ul>

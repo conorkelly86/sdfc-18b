@@ -26,6 +26,119 @@ const navLinks = [
   { label: "Media", href: "/media" },
 ];
 
+const Logo = () => (
+  <Box
+    sx={{
+      display: "flex",
+      alignItems: "center",
+      gap: 2,
+      flexGrow: 1,
+    }}
+  >
+    <Box
+      sx={{
+        position: "relative",
+        width: "50px",
+        height: "50px",
+        flexShrink: 0,
+      }}
+    >
+      <Link href="/">
+        <Image
+          src="/Salthill_Devon_FC_logo.png"
+          alt="Salthill Devon FC Logo"
+          fill
+          style={{ objectFit: "contain" }}
+          priority
+        />
+      </Link>
+    </Box>
+    <Typography
+      variant="h6"
+      component={Link}
+      href="/"
+      sx={{
+        fontWeight: 600,
+        fontSize: { xs: "1rem", sm: "1.25rem" },
+        display: { xs: "none", sm: "block" },
+        color: "white",
+        textDecoration: "none",
+        "&:hover": {
+          textDecoration: "none",
+        },
+      }}
+    >
+      Salthill Devon U18B
+    </Typography>
+  </Box>
+);
+
+const DesktopNav = () => (
+  <Box
+    sx={{
+      display: { xs: "none", md: "flex" },
+      gap: 1,
+      alignItems: "center",
+    }}
+  >
+    {navLinks.map((link) => (
+      <Button
+        key={link.href}
+        component={Link}
+        href={link.href}
+        sx={{
+          color: "white",
+          fontWeight: 500,
+          fontSize: "0.9rem",
+          padding: "6px 16px",
+          borderRadius: "8px",
+          "&:hover": {
+            background: "rgba(255, 255, 255, 0.1)",
+          },
+        }}
+      >
+        {link.label}
+      </Button>
+    ))}
+  </Box>
+);
+
+interface MobileNavProps {
+  drawerOpen: boolean;
+  setDrawerOpen: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+const MobileNav = ({ drawerOpen, setDrawerOpen }: MobileNavProps) => (
+  <Box sx={{ display: { xs: "flex", md: "none" } }}>
+    <IconButton
+      color="inherit"
+      edge="end"
+      onClick={() => setDrawerOpen(true)}
+      aria-label="menu"
+    >
+      <MenuIcon />
+    </IconButton>
+    <Drawer anchor="top" open={drawerOpen} onClose={() => setDrawerOpen(false)}>
+      <Box
+        sx={{ width: 220 }}
+        role="presentation"
+        onClick={() => setDrawerOpen(false)}
+        onKeyDown={() => setDrawerOpen(false)}
+      >
+        <List>
+          {navLinks.map((link) => (
+            <ListItem key={link.href} disablePadding>
+              <ListItemButton component={Link} href={link.href}>
+                <ListItemText primary={link.label} />
+              </ListItemButton>
+            </ListItem>
+          ))}
+        </List>
+      </Box>
+    </Drawer>
+  </Box>
+);
+
 export default function Navbar() {
   const [drawerOpen, setDrawerOpen] = React.useState(false);
 
@@ -46,106 +159,9 @@ export default function Navbar() {
             justifyContent: "space-between",
           }}
         >
-          <Box
-            sx={{
-              display: "flex",
-              alignItems: "center",
-              gap: 2,
-              flexGrow: 1,
-            }}
-          >
-            <Box
-              sx={{
-                position: "relative",
-                width: "50px",
-                height: "50px",
-                flexShrink: 0,
-              }}
-            >
-              <Image
-                src="/Salthill_Devon_FC_logo.png"
-                alt="Salthill Devon FC Logo"
-                fill
-                style={{
-                  objectFit: "contain",
-                }}
-                priority
-              />
-            </Box>
-            <Typography
-              variant="h6"
-              sx={{
-                fontWeight: 600,
-                fontSize: { xs: "1rem", sm: "1.25rem" },
-                display: { xs: "none", sm: "block" },
-              }}
-            >
-              Salthill Devon U18B
-            </Typography>
-          </Box>
-
-          {/* Desktop Nav */}
-          <Box
-            sx={{
-              display: { xs: "none", md: "flex" },
-              gap: 1,
-              alignItems: "center",
-            }}
-          >
-            {navLinks.map((link) => (
-              <Button
-                key={link.href}
-                component={Link}
-                href={link.href}
-                sx={{
-                  color: "white",
-                  fontWeight: 500,
-                  fontSize: "0.9rem",
-                  padding: "6px 16px",
-                  borderRadius: "8px",
-                  "&:hover": {
-                    background: "rgba(255, 255, 255, 0.1)",
-                  },
-                }}
-              >
-                {link.label}
-              </Button>
-            ))}
-          </Box>
-
-          {/* Mobile Nav */}
-          <Box sx={{ display: { xs: "flex", md: "none" } }}>
-            <IconButton
-              color="inherit"
-              edge="end"
-              onClick={() => setDrawerOpen(true)}
-              aria-label="menu"
-            >
-              <MenuIcon />
-            </IconButton>
-            <Drawer
-              anchor="top"
-              open={drawerOpen}
-              onClose={() => setDrawerOpen(false)}
-            >
-              <Box
-                sx={{ width: 220 }}
-                role="presentation"
-                onClick={() => setDrawerOpen(false)}
-                onKeyDown={() => setDrawerOpen(false)}
-              >
-                <List>
-                  {navLinks.map((link) => (
-                    <ListItem key={link.href} disablePadding>
-                      <ListItemButton component={Link} href={link.href}>
-                        <ListItemText primary={link.label} />
-                      </ListItemButton>
-                    </ListItem>
-                  ))}
-                </List>
-              </Box>
-            </Drawer>
-          </Box>
+          <Logo />
+          <DesktopNav />
+          <MobileNav drawerOpen={drawerOpen} setDrawerOpen={setDrawerOpen} />
         </Toolbar>
       </Container>
     </AppBar>

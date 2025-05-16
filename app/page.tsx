@@ -14,20 +14,41 @@ import {
 } from "@mui/material";
 import { useEffect, useState } from "react";
 import Navbar from "./components/NavBar";
-import stats from "./data/stats.json"; // Adjust the path if needed
+import stats from "./data/stats.json";
 import "./styles/styles.css";
 import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
 import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
+import { Player, SortDirection, SortField } from "./types";
 
-interface Player {
-  name: string;
-  goals: number;
-  assists: number;
-  appearances: number;
-}
+// Common styles
+const TABLE_HEADER_STYLE = {
+  background: "#213466",
+  color: "white",
+  fontWeight: 600,
+  fontSize: "1.1em",
+  borderBottom: "2px solid #38c4e9",
+  cursor: "pointer",
+  userSelect: "none",
+  "&:hover": {
+    background: "#1a2a52",
+  },
+  position: "relative",
+  paddingRight: "32px", // Space for the sort icon
+};
 
-type SortField = "goals" | "assists" | "appearances" | "name";
-type SortDirection = "asc" | "desc";
+const SORT_ICON_STYLE = {
+  position: "absolute",
+  right: "8px",
+  top: "50%",
+  transform: "translateY(-50%)",
+  display: "inline-flex",
+  alignItems: "center",
+};
+
+const TABLE_CELL_STYLE = {
+  color: "#213466",
+  borderBottom: "1px solid rgba(56, 196, 233, 0.2)",
+};
 
 const Page = () => {
   const [players, setPlayers] = useState<Player[]>([]);
@@ -42,10 +63,8 @@ const Page = () => {
 
   const handleSort = (field: SortField) => {
     if (field === sortField) {
-      // Toggle direction if clicking the same field
       setSortDirection(sortDirection === "asc" ? "desc" : "asc");
     } else {
-      // Set new field and default to descending
       setSortField(field);
       setSortDirection("desc");
     }
@@ -118,136 +137,49 @@ const Page = () => {
               <TableRow>
                 <TableCell
                   onClick={() => handleSort("name")}
-                  sx={{
-                    background: "#213466",
-                    color: "white",
-                    fontWeight: 600,
-                    fontSize: "1.1em",
-                    borderBottom: "2px solid #38c4e9",
-                    cursor: "pointer",
-                    userSelect: "none",
-                    "&:hover": {
-                      background: "#1a2a52",
-                    },
-                    width: "40%",
-                    position: "relative",
-                    paddingRight: "32px", // Space for the sort icon
-                  }}
+                  sx={{ ...TABLE_HEADER_STYLE, width: "40%" }}
                 >
                   Player
-                  <Box
-                    component="span"
-                    sx={{
-                      position: "absolute",
-                      right: "8px",
-                      top: "50%",
-                      transform: "translateY(-50%)",
-                      display: "inline-flex",
-                      alignItems: "center",
-                    }}
-                  >
+                  <Box component="span" sx={SORT_ICON_STYLE}>
                     <SortIcon field="name" />
                   </Box>
                 </TableCell>
                 <TableCell
                   onClick={() => handleSort("goals")}
                   sx={{
-                    background: "#213466",
-                    color: "white",
-                    fontWeight: 600,
-                    fontSize: "1.1em",
-                    borderBottom: "2px solid #38c4e9",
-                    textAlign: "center",
-                    cursor: "pointer",
-                    userSelect: "none",
-                    "&:hover": {
-                      background: "#1a2a52",
-                    },
+                    ...TABLE_HEADER_STYLE,
                     width: "20%",
-                    position: "relative",
-                    paddingRight: "32px", // Space for the sort icon
+                    textAlign: "center",
                   }}
                 >
                   Goals
-                  <Box
-                    component="span"
-                    sx={{
-                      position: "absolute",
-                      right: "8px",
-                      top: "50%",
-                      transform: "translateY(-50%)",
-                      display: "inline-flex",
-                      alignItems: "center",
-                    }}
-                  >
+                  <Box component="span" sx={SORT_ICON_STYLE}>
                     <SortIcon field="goals" />
                   </Box>
                 </TableCell>
                 <TableCell
                   onClick={() => handleSort("assists")}
                   sx={{
-                    background: "#213466",
-                    color: "white",
-                    fontWeight: 600,
-                    fontSize: "1.1em",
-                    borderBottom: "2px solid #38c4e9",
-                    textAlign: "center",
-                    cursor: "pointer",
-                    userSelect: "none",
-                    "&:hover": {
-                      background: "#1a2a52",
-                    },
+                    ...TABLE_HEADER_STYLE,
                     width: "20%",
-                    position: "relative",
-                    paddingRight: "32px", // Space for the sort icon
+                    textAlign: "center",
                   }}
                 >
                   Assists
-                  <Box
-                    component="span"
-                    sx={{
-                      position: "absolute",
-                      right: "8px",
-                      top: "50%",
-                      transform: "translateY(-50%)",
-                      display: "inline-flex",
-                      alignItems: "center",
-                    }}
-                  >
+                  <Box component="span" sx={SORT_ICON_STYLE}>
                     <SortIcon field="assists" />
                   </Box>
                 </TableCell>
                 <TableCell
                   onClick={() => handleSort("appearances")}
                   sx={{
-                    background: "#213466",
-                    color: "white",
-                    fontWeight: 600,
-                    fontSize: "1.1em",
-                    borderBottom: "2px solid #38c4e9",
-                    textAlign: "center",
-                    cursor: "pointer",
-                    userSelect: "none",
-                    "&:hover": {
-                      background: "#1a2a52",
-                    },
+                    ...TABLE_HEADER_STYLE,
                     width: "20%",
-                    position: "relative",
-                    paddingRight: "32px", // Space for the sort icon
+                    textAlign: "center",
                   }}
                 >
                   Apps
-                  <Box
-                    component="span"
-                    sx={{
-                      position: "absolute",
-                      right: "8px",
-                      top: "50%",
-                      transform: "translateY(-50%)",
-                      display: "inline-flex",
-                      alignItems: "center",
-                    }}
-                  >
+                  <Box component="span" sx={SORT_ICON_STYLE}>
                     <SortIcon field="appearances" />
                   </Box>
                 </TableCell>
@@ -269,9 +201,8 @@ const Page = () => {
                 >
                   <TableCell
                     sx={{
+                      ...TABLE_CELL_STYLE,
                       fontWeight: index === 0 ? 500 : 400,
-                      color: "#213466",
-                      borderBottom: "1px solid rgba(56, 196, 233, 0.2)",
                       width: "40%",
                     }}
                   >
@@ -279,9 +210,8 @@ const Page = () => {
                   </TableCell>
                   <TableCell
                     sx={{
+                      ...TABLE_CELL_STYLE,
                       textAlign: "center",
-                      color: "#213466",
-                      borderBottom: "1px solid rgba(56, 196, 233, 0.2)",
                       width: "20%",
                     }}
                   >
@@ -289,9 +219,8 @@ const Page = () => {
                   </TableCell>
                   <TableCell
                     sx={{
+                      ...TABLE_CELL_STYLE,
                       textAlign: "center",
-                      color: "#213466",
-                      borderBottom: "1px solid rgba(56, 196, 233, 0.2)",
                       width: "20%",
                     }}
                   >
@@ -299,9 +228,8 @@ const Page = () => {
                   </TableCell>
                   <TableCell
                     sx={{
+                      ...TABLE_CELL_STYLE,
                       textAlign: "center",
-                      color: "#213466",
-                      borderBottom: "1px solid rgba(56, 196, 233, 0.2)",
                       width: "20%",
                     }}
                   >
@@ -317,4 +245,4 @@ const Page = () => {
   );
 };
 
-export default Page; // Default export
+export default Page;
