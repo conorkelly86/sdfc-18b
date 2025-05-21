@@ -75,7 +75,10 @@ const Page = () => {
     if (sortField === "name") {
       return multiplier * a.name.localeCompare(b.name);
     }
-    return multiplier * (a[sortField] - b[sortField]);
+    if (sortField === "motm") {
+      return multiplier * ((a.motm || 0) - (b.motm || 0));
+    }
+    return multiplier * ((a[sortField] as number) - (b[sortField] as number));
   });
 
   const SortIcon = ({ field }: { field: SortField }) => {
