@@ -2,30 +2,30 @@
   "players": [
     {
       "name": "Conor Comer",
-      "goals": 1,
+      "goals": 2,
       "assists": 4,
-      "appearances": 15,
-      "motm": 2
+      "appearances": 16,
+      "motm": 3
     },
     {
       "name": "Conor Fogarty",
       "goals": 0,
       "assists": 0,
-      "appearances": 15,
+      "appearances": 16,
       "motm": 0
     },
     {
       "name": "Daniel Gilmore",
       "goals": 0,
-      "assists": 0,
-      "appearances": 15,
+      "assists": 1,
+      "appearances": 16,
       "motm": 1
     },
     {
       "name": "Daniel Mitchell",
       "goals": 4,
       "assists": 3,
-      "appearances": 15,
+      "appearances": 16,
       "motm": 4
     },
     {
@@ -39,7 +39,7 @@
       "name": "George Gallagher",
       "goals": 9,
       "assists": 6,
-      "appearances": 15,
+      "appearances": 16,
       "motm": 2
     },
     {
@@ -59,57 +59,57 @@
     {
       "name": "Kian O'Connell",
       "goals": 1,
-      "assists": 6,
-      "appearances": 15,
+      "assists": 7,
+      "appearances": 16,
       "motm": 2
     },
     {
       "name": "Kyle Cosgrove",
       "goals": 2,
       "assists": 3,
-      "appearances": 13,
+      "appearances": 14,
       "motm": 1
     },
     {
       "name": "Luke Mangan",
-      "goals": 8,
+      "goals": 9,
       "assists": 0,
-      "appearances": 11,
+      "appearances": 12,
       "motm": 2
     },
     {
       "name": "Matthew Hosty",
       "goals": 8,
       "assists": 6,
-      "appearances": 15,
+      "appearances": 16,
       "motm": 2
     },
     {
       "name": "Michael Monaghan",
-      "goals": 1,
+      "goals": 2,
       "assists": 2,
-      "appearances": 13,
+      "appearances": 14,
       "motm": 1
     },
     {
       "name": "Oisin Kelly",
       "goals": 0,
       "assists": 0,
-      "appearances": 11,
+      "appearances": 12,
       "motm": 0
     },
     {
       "name": "Oisin McMahon",
       "goals": 2,
       "assists": 1,
-      "appearances": 13,
+      "appearances": 14,
       "motm": 1
     },
     {
       "name": "Paddy Smyth",
       "goals": 1,
       "assists": 2,
-      "appearances": 8,
+      "appearances": 9,
       "motm": 1
     },
     {

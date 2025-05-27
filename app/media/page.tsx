@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import Navbar from "../components/NavBar";
 import { Typography } from "@mui/material";
+import "../styles/styles.css";
 
 const mediaFiles = [
   // Images
@@ -19,6 +20,7 @@ const mediaFiles = [
   "Salthill Devon v Bearna na Forbacha 12.JPG",
   "Salthill Devon v Bearna na Forbacha 13.JPG",
   "Salthill Devon v Bearna na Forbacha 14.JPG",
+  "cup-final.jpeg",
   "vGort.jpg",
   "team01.jpg",
   "vBearnaHome.jpg",
@@ -27,6 +29,11 @@ const mediaFiles = [
   // Videos
   "KyleGoal.mp4",
   "PaddyGoal.mp4",
+  "MichaelGoal.mp4",
+  "ConorGoal.mp4",
+  "LukeGoal.mp4",
+  "prematch-cup-final2.mp4",
+  "prematch-cup-final.mp4",
 ];
 
 const imageExtensions = [".jpg", ".jpeg", ".png", ".JPG", ".JPEG", ".PNG"];
@@ -145,17 +152,6 @@ const MediaPage = () => {
                 <source src={`/media/${vid}`} type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
-              <div
-                style={{
-                  color: "#213466",
-                  fontSize: 16,
-                  padding: "8px 0",
-                  textAlign: "center",
-                  background: "#f7fafc",
-                }}
-              >
-                {vid.replace(/\.[^/.]+$/, "")}
-              </div>
             </div>
           ))}
         </div>

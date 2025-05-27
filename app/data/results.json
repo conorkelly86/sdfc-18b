@@ -225,5 +225,29 @@
       }
     ],
     "motm": "Daniel Mitchell"
+  },
+  {
+    "gameWeek": 16,
+    "homeTeam": "Ougherard",
+    "awayTeam": "Salthill Devon",
+    "score": "4 - 3",
+    "goalScorers": [
+      {
+        "name": "Michael Monaghan",
+        "team": "away",
+        "assist": "Kian O'Connell"
+      },
+      {
+        "name": "Conor Comer",
+        "team": "away",
+        "assist": ""
+      },
+      {
+        "name": "Luke Mangan",
+        "team": "away",
+        "assist": "Daniel Gilmore"
+      }
+    ],
+    "motm": "Conor Comer"
   }
 ]
